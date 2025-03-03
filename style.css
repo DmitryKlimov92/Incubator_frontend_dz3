@@ -9,7 +9,7 @@
     margin: 0 auto;
     width: 100%;
     /* 📍 Максимальная ширина для контейнера */
-    max-width: 1300px;
+    max-width: 1140px;
 }
 
 body {
@@ -34,6 +34,11 @@ header span {
     background-color: #fafaff;
     padding: 60px 0;
     min-height: 100vh;
+    display: flex;          /* Включаем Flexbox */
+    flex-direction: column; /* Элементы располагаются вертикально */
+    justify-content: center; /* Центрирование по вертикали */
+    align-items: center;    /* Центрирование по горизонтали (опционально) */
+    height: 100vh;          /* Высота секции на весь экран (или нужная высота) */
     /* 📍 Свойства flexbox для размещения container-a вертикально по центру */
 }
 
@@ -74,6 +79,7 @@ header span {
 
 .about-section .wrapper {
     /* 📍 Свойствa flexbox для отступов между элементами select, .info-wrapper и .skills-wrapper  */
+    gap: 16px;
 }
 
 select {
@@ -97,6 +103,8 @@ select:hover,
 
 .info-wrapper {
     /* 📍 Свойство flexbox для расположения 2-х списков в ряд */
+    display: flex;          /* Включаем Flexbox */
+    flex-direction: row;
 }
 
 .section-title {
@@ -124,21 +132,28 @@ select:hover,
 
 .skills-block {
     /* 📍 Свойства flexbox для расположения формы над элементами с классом .label */
+    display: flex;
+    flex-direction: column;
 }
 
 .skills {
     /* 📍 Свойства flexbox для расположения элементов с классом .label */
+    min-width: 50%;
 }
 
 .books-list {
     font-weight: 400;
     font-size: 16px;
     padding-left: 20px;
+    min-width: 50%;
 }
 
 .label {
     font-weight: 400;
     font-size: 16px;
+    display: flex;          /* Включаем Flexbox */
+    flex-direction: column; /* Элементы располагаются вертикально */
+    gap: 20px;             /* Отступ между элементами (замените 10px на значение из макета) */
 }
 
 form {
